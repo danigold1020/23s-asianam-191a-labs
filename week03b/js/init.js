@@ -10,10 +10,10 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 
 // use our marker functions
-addMarker(21.351190, -157.793690, 'Manoa Falls Trail','favorite hike ever!', 8)
-addMarker(21.637810,-158.057660,'Waimea Valley','beautiful nature and unique farmers market!', 10)
-addMarker(21.268570,-157.812430,'Diamond Head State Monument','second best hiking experience after Manoa Falls!', 12)
-addMarker(21.506750, -158.005100,'Dole Plantation','delicious dole whip!', 15)
+addMarker(21.351190, -157.793690, 'Manoa Falls Trail','favorite hike ever!', 13)
+addMarker(21.637810,-158.057660,'Waimea Valley','beautiful nature and unique farmers market!', 13)
+addMarker(21.268570,-157.812430,'Diamond Head State Monument','second best hiking experience after Manoa Falls!', 15)
+addMarker(21.506750, -158.005100,'Dole Plantation','delicious dole whip!', 13)
 
 // create a function to add markers
 function addMarker(lat,lng,title,message, zoomlevel){
