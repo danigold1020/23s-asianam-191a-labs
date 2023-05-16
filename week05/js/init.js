@@ -1,5 +1,5 @@
 // declare variables
-let mapOptions = {'center': [34.0709,-118.444],'zoom':5}
+let mapOptions = {'center': [34.4135868,-119.8496976],'zoom':8}
 
 // use the variables
 const map = L.map('the_map').setView(mapOptions.center, mapOptions.zoom);
@@ -15,15 +15,30 @@ function addMarker(lat,lng,title,message){
     return message
 }
 
+const dataUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTsfi0OL-ZDjF2GznxLodQinhPIidkyA9jO8EIH82ZUeGyyOR3nBmyKz2nc7cJzgQkiyoanv1c5GIuX/pub?output=csv"
+
 function loadData(url){
-    fetch(url)
-    .then(response => {
-        return response
-    })
-    .then(data =>{
-        // Basic Leaflet method to add GeoJSON data
-     console.log(data)
+    Papa.parse(url, {
+        header: true,
+        download: true,
+        complete: results => processData(results)
     })
 }
-const dataURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTgSpMPrWb9h3ccNLJKxO4I1u6BRQP_PdKnzVcfI8CQ6uDYi9YQ7XFJyIousEIBg_4jBJ7KEAuB5qWx/pub?output=csv"
-loadData(dataURL)
+
+function processData(results){
+    console.log(results)
+    results.data.forEach(data => {
+        console.log(data)
+        addMarker(data.lat,data.lng, data['What is your zip code?'], data['Are you aware of the sources of oil pollution in or near your area?'])
+    })
+}
+
+loadData(dataUrl)
+
+
+
+
+
+
+
+
