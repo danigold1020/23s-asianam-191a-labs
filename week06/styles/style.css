@@ -2,7 +2,8 @@ body{
     display: grid;
     grid-template-rows: 50px auto auto;
     grid-template-areas: "header" "main_content" "footer";
-    background-color: rgb(243, 217, 151);
+    /* background-color: rgb(243, 217, 151); */
+    background-image: linear-gradient(to right, rgb(240, 113, 16), rgb(237, 187, 23));
     gap: 10px;
 }
 
@@ -45,14 +46,16 @@ header{
     grid-template-columns: repeat(2, 1fr);
 }
 
+
 button {
-    background-color: #9e7110; /* Green */
+    background-color: #9b4906; /* Brown Gradient */
     border: none;
     color: white;
-    padding: 6px 5px;
+    padding: 10px 5px;
     margin: 2px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
 }
+
