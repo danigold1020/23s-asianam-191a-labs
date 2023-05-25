@@ -11,8 +11,8 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 function addMarker(data){
     // console.log(data)
     // these are the names of our lat/long fields in the google sheets:
-    L.marker([data.lat,data.lng]).addTo(map).bindPopup(`<h2>${data['What is your zip code?']}</h2> <h3>${data['Are you aware of the sources of oil pollution in or near your area?']}</h3>`)
-    createButtons(data.lat,data.lng,data['What is your zip code?'])
+    L.marker([data.lat,data.lng]).addTo(map).bindPopup(`<h2>${data['What is the zip code of your residence in Santa Barbara?']}</h2> <h3>${data['Do you feel that the current methods/resources are adequate?']}</h3>`)
+    createButtons(data.lat,data.lng,data['What is the zip code of your residence in Santa Barbara?'])
     return
 }
 
@@ -44,7 +44,7 @@ function createHomeButton(lat,lng,title){
     spaceForButtons.appendChild(newButton);//this adds the button to our page.
 }
 
-const dataUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTsfi0OL-ZDjF2GznxLodQinhPIidkyA9jO8EIH82ZUeGyyOR3nBmyKz2nc7cJzgQkiyoanv1c5GIuX/pub?output=csv"
+const dataUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTLlHVos2OZEOIXJm728B3ykc7hwdXLnoIO6xZLmvdys4TZE2aZXePhH6Dl4ooUaKRxbDVqJWUAK_nc/pub?output=csv"
 
 function loadData(url){
     Papa.parse(url, {
