@@ -2,7 +2,7 @@ body{
     display: grid;
     grid-template-rows: 50px auto auto;
     grid-template-areas: "header" "main_content" "footer";
-    background-color: aqua;
+    background-color: rgb(235, 159, 231);
     gap: 10px;
 }
 
@@ -44,7 +44,7 @@ header{
 #surveyButton{
     padding: 15px 32px;
     margin: 10px;
-    background-color: #4CAF50;
+    background-color: #f3e5ed;
     cursor: pointer;
 }
 
@@ -55,6 +55,17 @@ header{
 
 #placeForButtons{
     grid-area: buttonHome;
+    background-color: #d81cce; /* Brown Gradient */
+    color: rgb(232, 53, 232);
+    padding: 20px 20px;
+    margin: 20px;
     display:grid;
     grid-template-columns: repeat(2, 1fr);
 }
+
+img {
+    width: 700px;
+    height: 700px;
+    object-fit: cover;
+    padding:5px
+} 
